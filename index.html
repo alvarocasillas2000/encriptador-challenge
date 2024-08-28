@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/encrypted.png">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="https://www.aluracursos.com/" target="_blank"><img class="header__imagen" src="assets/Logo.png" alt="Logo de alura"></a>
+    </header>
+
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+    
+            <textarea type="text" name="mensaje" id="mensaje" class="presentacion__contenido__mensaje"
+            placeholder="Ingresa el texto aqui"></textarea>
+
+            <p class="presentacion__contenido__texto"><i class="bi bi-exclamation-circle-fill"></i> Solo letras minusculas y sin acentos</p>
+            
+            <div class="presentacion__contenido__acciones">
+                <button onclick="encriptar();" id="encriptar" class="presentacion__contenido__accion__boton">Encriptar</button>
+                <button onclick="desencriptar();" id="desencriptar" class="presentacion__contenido__accion__boton">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="presentacion__mensaje__desencriptado">
+
+            <img class="presentacion__mensaje__desencriptado__imagen" id="presentacionImagen" src="assets/looking.png"
+                alt="imagen de un personaje buscando">
+            
+            <h1 class="presentacion__mensaje__desencriptado__titulo" id="presentacionTexto">
+                Ningún mensaje fue encontrado
+            </h1>
+            
+            <p class="presentacion__mensaje__desencriptado__texto" id="presentacionTextoIngresa">
+                Ingresa el texto que desees encriptar o desencriptar.
+            </p>
+
+            <p class="presentacion__mensaje__desencriptado__texto" id="presentacionTextoResultado"></p>
+    
+            <div class="presentacion__mensaje__botones">
+                
+                <button onclick="condicionesIniciales();" id="condicionesIniciales" class="presentacion__botones__funciones"
+                >Limpiar</button>
+
+                <button onclick="copiar();" id="copiar" class="presentacion__botones__funciones" 
+                >Copiar</button>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+            <p class="footer__texto">Alvaro Casillas &copy; Todos los derechos reservados</p>
+    </footer>
+
+    <script src="encrypt.js"></script>
+
+</body>
+
+</html>
